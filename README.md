@@ -1,6 +1,12 @@
 # Fish Riddle Club
 
-An offline, English-language Android picture quiz with 16 illustrated fish, four expeditions, spoken clues and facts, and a collectible field guide. Built with Kotlin and Jetpack Compose for phones, tablets, and ChromeOS. Android 8.0 or later is required.
+An offline, multilingual Android picture quiz with 16 illustrated fish, four expeditions, spoken clues and facts, and a collectible field guide. Built with Kotlin and Jetpack Compose for phones, tablets, and ChromeOS. Android 8.0 or later is required.
+
+## Languages
+
+Open **Settings → Language** to choose one of 11 languages or follow your device. The game includes English, Indonesian, Spanish, Brazilian Portuguese, French, German, Japanese, Korean, Simplified Chinese, Traditional Chinese, and Arabic. Android uses English when none of the device’s preferred languages are supported.
+
+All game text and riddles ship in the app. English narration is bundled. Other languages use an installed offline text-to-speech voice from your Android device.
 
 ## Build locally
 

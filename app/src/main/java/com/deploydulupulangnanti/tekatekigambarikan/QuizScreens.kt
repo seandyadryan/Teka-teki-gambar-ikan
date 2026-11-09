@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.liveRegion
@@ -41,15 +42,15 @@ internal fun RiddleScreen(
     expedition: Expedition,
     expeditionIndex: Int,
     specimen: Int,
-    picked: String?,
+    picked: Int?,
     voice: Boolean,
     exit: () -> Unit,
     listen: () -> Unit,
-    answer: (String) -> Unit,
+    answer: (Int) -> Unit,
     next: () -> Unit,
 ) {
     val fish = expedition.fish[specimen]
-    val solved = picked == fish.name
+    val solved = picked == fish.correctChoice
     val scroll = rememberScrollState()
     LaunchedEffect(fish.id) { scroll.scrollTo(0) }
 
@@ -63,10 +64,10 @@ internal fun RiddleScreen(
                 Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                     TextButton(onClick = exit) {
                         FieldGlyph(Glyph.Back, Gold, Modifier.size(19.dp))
-                        Text("Dive", Modifier.padding(start = 6.dp))
+                        Text(stringResource(R.string.nav_dive), Modifier.padding(start = 6.dp))
                     }
                     Label(expedition.title.uppercase(java.util.Locale.ROOT), modifier = Modifier.weight(1f).padding(horizontal = 8.dp))
-                    Stamp("${specimen + 1} / ${expedition.fish.size}")
+                    Stamp(stringResource(R.string.progress_count, specimen + 1, expedition.fish.size))
                 }
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(5.dp)) {
                     expedition.fish.indices.forEach { index ->
@@ -97,10 +98,10 @@ private fun SpecimenPlate(fish: Fish, expedition: Int, specimen: Int, solved: Bo
         CurrentLines(Modifier.matchParentSize())
         FishArt(
             fish,
-            if (solved) "Illustration of ${fish.name}" else "Mystery fish illustration",
+            if (solved) stringResource(R.string.image_named, fish.name) else stringResource(R.string.image_mystery),
             Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 13.dp),
         )
-        Label("PLATE ${expedition + 1}.${specimen + 1}", Gold, Modifier.align(Alignment.TopStart).padding(11.dp))
+        Label(stringResource(R.string.plate, expedition + 1, specimen + 1), Gold, Modifier.align(Alignment.TopStart).padding(11.dp))
         Label(fish.habitat.uppercase(java.util.Locale.ROOT), SeaGlass, Modifier.align(Alignment.BottomEnd).padding(10.dp))
     }
 }
@@ -110,45 +111,45 @@ private fun QuestionSheet(
     fish: Fish,
     specimen: Int,
     last: Int,
-    picked: String?,
+    picked: Int?,
     voice: Boolean,
     listen: () -> Unit,
-    answer: (String) -> Unit,
+    answer: (Int) -> Unit,
     next: () -> Unit,
     modifier: Modifier,
 ) {
-    val solved = picked == fish.name
+    val solved = picked == fish.correctChoice
     Column(
         modifier.clip(RoundedCornerShape(13.dp)).background(Paper).padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             Label(
-                if (solved) "SPECIMEN IDENTIFIED" else "THE CLUE",
+                stringResource(if (solved) R.string.specimen_found else R.string.clue),
                 DarkMuted,
                 Modifier.weight(1f).semantics { liveRegion = LiveRegionMode.Polite },
             )
-            if (voice) ListenButton(if (solved) "Hear fact" else "Hear clue", listen)
+            if (voice) ListenButton(stringResource(if (solved) R.string.hear_fact else R.string.hear_clue), listen)
         }
         Headline(if (solved) fish.name else fish.question, 29, InkDeep)
         Rule(color = PaperDim)
         if (solved) {
             Text(fish.fact, color = Ink, fontSize = 15.sp, lineHeight = 22.sp)
-            PrimaryAction(if (specimen == last) "See dive summary" else "Next riddle", Modifier.fillMaxWidth(), next)
+            PrimaryAction(stringResource(if (specimen == last) R.string.summary else R.string.next_riddle), Modifier.fillMaxWidth(), next)
         } else {
             val answersPerRow = if (LocalDensity.current.fontScale >= 1.3f) 1 else 2
             fish.choices.withIndex().chunked(answersPerRow).forEach { choices ->
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(7.dp)) {
                     choices.forEach { (index, choice) ->
                         AnswerChoice(
-                            choice, ('A' + index).toString(), choice == picked,
+                            choice, ('A' + index).toString(), index == picked,
                             Modifier.weight(1f),
-                        ) { answer(choice) }
+                        ) { answer(index) }
                     }
                 }
             }
             Text(
-                if (picked != null) "Try again. Look closely at the picture." else "Pick one answer to log your discovery.",
+                stringResource(if (picked != null) R.string.retry else R.string.choose_answer),
                 color = if (picked != null) Rust else DarkMuted,
                 modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite },
                 fontSize = 12.sp,
@@ -196,20 +197,20 @@ internal fun Complete(expedition: Expedition, score: Int, nextRoute: Expedition?
         ) {
             TextButton(onClick = home) {
                 FieldGlyph(Glyph.Back, Gold, Modifier.size(19.dp))
-                Text("Dive", Modifier.padding(start = 6.dp))
+                Text(stringResource(R.string.nav_dive), Modifier.padding(start = 6.dp))
             }
-            Label("EXPEDITION COMPLETE", Gold)
+            Label(stringResource(R.string.expedition_complete), Gold)
             Headline(expedition.title, 44)
-            Text("You logged all ${expedition.fish.size} fish on this route.", color = Mist, fontSize = 16.sp)
-            Stamp("$score / ${expedition.fish.size} ON FIRST TRY")
+            Text(stringResource(R.string.logged_all, expedition.fish.size), color = Mist, fontSize = 16.sp)
+            Stamp(stringResource(R.string.first_try, score, expedition.fish.size))
             Rule()
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 expedition.fish.forEach {
                     FishArt(it, it.name, Modifier.weight(1f).height(72.dp))
                 }
             }
-            PrimaryAction(nextRoute?.let { "Next: ${it.title}" } ?: "Open field guide", Modifier.fillMaxWidth(), next)
-            TextButton(onClick = home) { Text("Back to expeditions") }
+            PrimaryAction(nextRoute?.let { stringResource(R.string.next_expedition, it.title) } ?: stringResource(R.string.open_guide), Modifier.fillMaxWidth(), next)
+            TextButton(onClick = home) { Text(stringResource(R.string.back_expeditions)) }
         }
     }
 }
@@ -230,9 +231,9 @@ internal fun SpecimenDialog(fish: Fish, voice: Boolean, listen: () -> Unit, clos
             }
             Text(fish.fact, color = Ink, fontSize = 15.sp, lineHeight = 22.sp)
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                if (voice) ListenButton("Hear fact", listen)
+                if (voice) ListenButton(stringResource(R.string.hear_fact), listen)
                 Spacer(Modifier.weight(1f))
-                TextButton(onClick = close) { Text("Close", color = InkDeep) }
+                TextButton(onClick = close) { Text(stringResource(R.string.close), color = InkDeep) }
             }
         }
     }

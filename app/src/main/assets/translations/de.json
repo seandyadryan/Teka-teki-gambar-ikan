@@ -1,0 +1,104 @@
+{
+  "otherNames": {
+    "Lanternfish": "Laternenfisch",
+    "Sunfish": "Mondfisch"
+  },
+  "fish": {
+    "anglerfish": {
+      "name": "Tiefsee-Anglerfisch",
+      "question": "Welcher Fisch trägt seine eigene Lampe?",
+      "fact": "In der Tiefsee hilft ein leuchtender Köder manchen Anglerfischen, ihre Beute in Reichweite zu locken.",
+      "habitat": "Tiefsee"
+    },
+    "clownfish": {
+      "name": "Clownfisch",
+      "question": "Welcher Fisch wohnt zwischen brennenden Tentakeln?",
+      "fact": "Clownfische leben zwischen Seeanemonen. Eine schützende Schleimschicht hilft ihnen, die Stiche auszuhalten.",
+      "habitat": "Korallenriff"
+    },
+    "seahorse": {
+      "name": "Seepferdchen",
+      "question": "Bei welchem Fisch trägt der Vater die Jungen aus?",
+      "fact": "Das Weibchen legt seine Eier in die Bruttasche des Männchens. Dort trägt es sie, bis sie schlüpfen können.",
+      "habitat": "Seegraswiese"
+    },
+    "lionfish": {
+      "name": "Feuerfisch",
+      "question": "Welcher gestreifte Fisch trägt einen Fächer aus giftigen Stacheln?",
+      "fact": "Der Feuerfisch nutzt seine langen Giftstacheln zur Verteidigung und seine breiten Flossen, um Beute einzukreisen.",
+      "habitat": "Felsriff"
+    },
+    "pufferfish": {
+      "name": "Kugelfisch",
+      "question": "Welcher Fisch wird bei Gefahr zu einer stacheligen Kugel?",
+      "fact": "Manche Kugelfische schlucken Wasser und blähen sich auf. Durch die plötzliche Größe lassen sie sich schwerer verschlucken.",
+      "habitat": "Küstengewässer"
+    },
+    "hammerhead": {
+      "name": "Hammerhai",
+      "question": "Welcher Hai hat einen Kopf in Form eines Werkzeugs?",
+      "fact": "Auf dem breiten Kopf verteilen sich Sinnesorgane, die schwache elektrische Signale von Beutetieren wahrnehmen können.",
+      "habitat": "Küstengewässer"
+    },
+    "parrotfish": {
+      "name": "Papageifisch",
+      "question": "Welcher Rifffisch hat einen Schnabel wie ein Vogel?",
+      "fact": "Zusammengewachsene Zähne bilden einen Schnabel. Viele Arten schaben Algen von Korallen und scheiden die zerkleinerten Teilchen als Sand aus.",
+      "habitat": "Korallenriff"
+    },
+    "swordfish": {
+      "name": "Schwertfisch",
+      "question": "Welcher Fisch kann mit seinem langen Schwert durch einen Schwarm schlagen?",
+      "fact": "Der Schwertfisch kann mit seinem flachen Schwert durch einen Beuteschwarm schlagen und Fische betäuben oder verletzen, bevor er sie frisst.",
+      "habitat": "Offenes Meer"
+    },
+    "whale_shark": {
+      "name": "Walhai",
+      "question": "Welcher gefleckte Riese ist der größte lebende Fisch?",
+      "fact": "Der Walhai ist der größte Fisch der Welt. Er filtert Plankton und kleine Tiere aus dem Wasser.",
+      "habitat": "Offenes Meer"
+    },
+    "blue_tang": {
+      "name": "Paletten-Doktorfisch",
+      "question": "Welcher blaue Rifffisch hat einen leuchtend gelben Schwanz?",
+      "fact": "Der Paletten-Doktorfisch hat nahe am Schwanz einen scharfen Stachel zur Verteidigung.",
+      "habitat": "Korallenriff"
+    },
+    "manta_ray": {
+      "name": "Mantarochen",
+      "question": "Welcher Fisch scheint mit Flügeln durchs Wasser zu fliegen?",
+      "fact": "Der Mantarochen schwimmt mit kräftigen Schlägen seiner breiten Brustflossen. Lappen neben dem Maul lenken Nahrung hinein.",
+      "habitat": "Offenes Meer"
+    },
+    "moray_eel": {
+      "name": "Muräne",
+      "question": "Welcher bandförmige Fisch versteckt sich in Riffspalten?",
+      "fact": "Die Muräne öffnet und schließt ständig ihr Maul, damit Wasser über ihre Kiemen strömt.",
+      "habitat": "Felsriff"
+    },
+    "sailfish": {
+      "name": "Segelfisch",
+      "question": "Welcher Jäger des Meeres kann ein hohes Segel auf dem Rücken aufstellen?",
+      "fact": "Beim Schwimmen kann der Segelfisch seine hohe Rückenflosse in eine Rinne am Rücken einklappen.",
+      "habitat": "Offenes Meer"
+    },
+    "mandarinfish": {
+      "name": "Mandarinfisch",
+      "question": "Welcher Rifffisch zeigt geschwungene Muster in Orange und leuchtendem Blau?",
+      "fact": "Der Mandarinfisch verdankt sein Blau Pigmentzellen. Er lebt oft zwischen Korallenbruch und verzweigten Korallen.",
+      "habitat": "Geschütztes Riff"
+    },
+    "sunfish": {
+      "name": "Meeresmondfisch",
+      "question": "Welcher runde Fisch sonnt sich häufig an der Wasseroberfläche?",
+      "fact": "Meeresmondfische liegen manchmal seitlich an der Oberfläche. Ein möglicher Grund ist, dass sie sich nach tiefen Tauchgängen aufwärmen.",
+      "habitat": "Offenes Meer"
+    },
+    "archerfish": {
+      "name": "Schützenfisch",
+      "question": "Welcher Fisch schießt Insekten mit einem Wasserstrahl herunter?",
+      "fact": "Der Schützenfisch spritzt einen dünnen Strahl auf Insekten über dem Wasser und fängt sie, wenn sie herunterfallen.",
+      "habitat": "Mangroven"
+    }
+  }
+}

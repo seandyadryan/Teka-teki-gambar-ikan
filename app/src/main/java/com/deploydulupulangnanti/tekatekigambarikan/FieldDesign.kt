@@ -29,6 +29,8 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -142,10 +144,11 @@ internal enum class Glyph { Dive, Book, Settings, Sound, Back, Forward, Check }
 
 @Composable
 internal fun FieldGlyph(glyph: Glyph, color: Color, modifier: Modifier = Modifier) {
+    val mirror = LocalLayoutDirection.current == LayoutDirection.Rtl && (glyph == Glyph.Back || glyph == Glyph.Forward)
     Canvas(modifier) {
         val unit = size.minDimension / 24f
         val origin = Offset((size.width - 24 * unit) / 2, (size.height - 24 * unit) / 2)
-        fun pt(x: Float, y: Float) = origin + Offset(x * unit, y * unit)
+        fun pt(x: Float, y: Float) = origin + Offset((if (mirror) 24f - x else x) * unit, y * unit)
         fun line(vararg points: Pair<Float, Float>) {
             for (i in 0 until points.lastIndex) {
                 val (x, y) = points[i]

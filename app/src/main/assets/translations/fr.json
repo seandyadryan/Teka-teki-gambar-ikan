@@ -1,0 +1,104 @@
+{
+  "otherNames": {
+    "Lanternfish": "Poisson-lanterne",
+    "Sunfish": "Poisson-lune"
+  },
+  "fish": {
+    "anglerfish": {
+      "name": "Baudroie abyssale",
+      "question": "Quel poisson porte sa propre lampe ?",
+      "fact": "Dans les grands fonds, un leurre lumineux aide certaines baudroies à attirer leurs proies à portée.",
+      "habitat": "Grands fonds"
+    },
+    "clownfish": {
+      "name": "Poisson-clown",
+      "question": "Quel poisson vit parmi des tentacules urticants ?",
+      "fact": "Le poisson-clown vit parmi les anémones de mer. Une couche de mucus le protège de leurs piqûres.",
+      "habitat": "Récif corallien"
+    },
+    "seahorse": {
+      "name": "Hippocampe",
+      "question": "Chez quel poisson le père porte-t-il les petits ?",
+      "fact": "La femelle dépose ses œufs dans la poche du mâle. Il les porte jusqu’à ce qu’ils soient prêts à éclore.",
+      "habitat": "Herbier marin"
+    },
+    "lionfish": {
+      "name": "Poisson-lion",
+      "question": "Quel poisson rayé arbore un éventail d’épines venimeuses ?",
+      "fact": "Le poisson-lion se défend avec ses longues épines venimeuses et utilise ses larges nageoires pour coincer ses proies.",
+      "habitat": "Récif rocheux"
+    },
+    "pufferfish": {
+      "name": "Poisson-globe",
+      "question": "Quel poisson devient une boule hérissée quand il prend peur ?",
+      "fact": "Certains poissons-globes avalent de l’eau pour gonfler. Ce changement soudain de taille les rend plus difficiles à avaler.",
+      "habitat": "Eaux côtières"
+    },
+    "hammerhead": {
+      "name": "Requin-marteau",
+      "question": "Quel requin a la tête en forme d’outil ?",
+      "fact": "La tête large du requin-marteau répartit des organes sensoriels capables de détecter les faibles signaux électriques de ses proies.",
+      "habitat": "Eaux côtières"
+    },
+    "parrotfish": {
+      "name": "Poisson-perroquet",
+      "question": "Quel poisson de récif a un bec d’oiseau ?",
+      "fact": "Ses dents soudées forment un bec. De nombreuses espèces raclent les algues sur le corail et rejettent les débris broyés sous forme de sable.",
+      "habitat": "Récif corallien"
+    },
+    "swordfish": {
+      "name": "Espadon",
+      "question": "Quel poisson peut frapper un banc avec son long rostre ?",
+      "fact": "L’espadon peut balayer un banc de proies avec son rostre plat, étourdissant ou blessant des poissons avant de les manger.",
+      "habitat": "Pleine mer"
+    },
+    "whale_shark": {
+      "name": "Requin-baleine",
+      "question": "Quel géant tacheté est le plus grand poisson vivant ?",
+      "fact": "Le requin-baleine est le plus grand poisson du monde. Il filtre le plancton et les petits animaux présents dans l’eau.",
+      "habitat": "Pleine mer"
+    },
+    "blue_tang": {
+      "name": "Chirurgien bleu",
+      "question": "Quel poisson bleu de récif a une queue jaune vif ?",
+      "fact": "Le chirurgien bleu possède une épine tranchante près de la queue pour se défendre.",
+      "habitat": "Récif corallien"
+    },
+    "manta_ray": {
+      "name": "Raie manta",
+      "question": "Quel poisson semble voler avec des ailes sous l’eau ?",
+      "fact": "La raie manta nage en battant de ses larges nageoires pectorales. Les lobes près de sa bouche y dirigent la nourriture.",
+      "habitat": "Pleine mer"
+    },
+    "moray_eel": {
+      "name": "Murène",
+      "question": "Quel poisson en forme de ruban se cache dans les fissures du récif ?",
+      "fact": "La murène ouvre et ferme sans cesse la bouche pour faire circuler l’eau sur ses branchies.",
+      "habitat": "Récif rocheux"
+    },
+    "sailfish": {
+      "name": "Voilier",
+      "question": "Quel chasseur marin peut dresser une grande voile sur son dos ?",
+      "fact": "En nageant, le voilier peut replier sa haute nageoire dorsale dans un sillon le long du dos.",
+      "habitat": "Pleine mer"
+    },
+    "mandarinfish": {
+      "name": "Poisson-mandarin",
+      "question": "Quel poisson de récif porte des motifs orange et bleu électrique ?",
+      "fact": "Le poisson-mandarin doit sa couleur bleue à des cellules pigmentaires. Il vit souvent parmi les débris et les coraux ramifiés.",
+      "habitat": "Récif abrité"
+    },
+    "sunfish": {
+      "name": "Môle",
+      "question": "Quel poisson rond se prélasse souvent à la surface ?",
+      "fact": "La môle se couche parfois sur le côté à la surface. Elle pourrait ainsi se réchauffer après une plongée profonde.",
+      "habitat": "Pleine mer"
+    },
+    "archerfish": {
+      "name": "Poisson-archer",
+      "question": "Quel poisson fait tomber des insectes avec un jet d’eau ?",
+      "fact": "Le poisson-archer lance un jet fin sur les insectes au-dessus de l’eau, puis les attrape quand ils tombent.",
+      "habitat": "Mangroves"
+    }
+  }
+}

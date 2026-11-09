@@ -6,7 +6,7 @@ import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.MediaPlayer
 
-internal class DiveAudio(private val context: Context) {
+internal class DiveAudio(private val context: Context, val languageTag: String) {
     private val manager = context.getSystemService(AudioManager::class.java)
     private val attributes = AudioAttributes.Builder()
         .setUsage(AudioAttributes.USAGE_GAME)
@@ -24,8 +24,14 @@ internal class DiveAudio(private val context: Context) {
     private var music: MediaPlayer? = null
     private var voice: MediaPlayer? = null
 
+    private val speech = if (languageTag == "en") null else
+        OfflineNarration(context, languageTag, attributes, ::restoreAfterVoice)
+    val narrationStatus: NarrationStatus
+        get() = speech?.status ?: NarrationStatus.Ready
+
     fun setForeground(active: Boolean) {
         foreground = active
+        if (active && speech?.status == NarrationStatus.Missing) speech.refresh()
         if (!active) {
             stopVoice()
             music?.pause()
@@ -41,12 +47,17 @@ internal class DiveAudio(private val context: Context) {
         updateMusic()
     }
 
-    fun narrate(id: String, answer: Boolean = false) {
-        if (!foreground || !voiceEnabled) return
+    fun narrate(fish: Fish, answer: Boolean = false) {
+        if (!foreground || !voiceEnabled || narrationStatus != NarrationStatus.Ready) return
         stopVoice()
         if (!requestFocus()) return
+        if (speech != null) {
+            val text = if (answer) "${fish.name}. ${fish.fact}" else fish.question
+            if (speech.speak(text)) music?.setVolume(0.10f, 0.10f) else restoreAfterVoice()
+            return
+        }
         val kind = if (answer) "fact" else "clue"
-        voice = player("audio/${id}_${kind}.ogg")
+        voice = player("audio/${fish.id}_${kind}.ogg")
         if (voice == null) {
             if (!musicEnabled) abandonFocus()
             return
@@ -59,14 +70,20 @@ internal class DiveAudio(private val context: Context) {
     }
 
     fun stopVoice() {
+        speech?.stop()
         voice?.release()
         voice = null
+        restoreAfterVoice()
+    }
+
+    private fun restoreAfterVoice() {
         music?.setVolume(0.26f, 0.26f)
         if (!musicEnabled) abandonFocus()
     }
 
     fun close() {
         setForeground(false)
+        speech?.close()
         music?.release()
         music = null
     }

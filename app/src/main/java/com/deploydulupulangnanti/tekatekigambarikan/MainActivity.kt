@@ -3,7 +3,7 @@ package com.deploydulupulangnanti.tekatekigambarikan
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
@@ -16,6 +16,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -25,14 +26,16 @@ import androidx.core.net.toUri
 
 internal const val PRIVACY_URL = "https://seandyadryan.github.io/Teka-teki-gambar-ikan/"
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var audio: DiveAudio
+    private var chosenLanguage by mutableStateOf("")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        chosenLanguage = selectedLanguageTag()
         val transparent = android.graphics.Color.TRANSPARENT
         enableEdgeToEdge(SystemBarStyle.dark(transparent), SystemBarStyle.dark(transparent))
-        audio = DiveAudio(this)
+        audio = DiveAudio(this, getString(R.string.language_tag))
         val expeditions = loadExpeditions(this)
         val preferences = getSharedPreferences("dive_log", MODE_PRIVATE)
         setContent {
@@ -43,7 +46,14 @@ class MainActivity : ComponentActivity() {
                 ),
             ) {
                 Box(Modifier.fillMaxSize().background(Ink).safeDrawingPadding()) {
-                    RiddleClub(expeditions, preferences, audio) {
+                    RiddleClub(
+                        expeditions, preferences, audio,
+                        selectedLanguage = chosenLanguage,
+                        changeLanguage = { tag ->
+                            selectLanguage(tag)
+                            chosenLanguage = tag
+                        },
+                    ) {
                         val intent = Intent(Intent.ACTION_VIEW, PRIVACY_URL.toUri())
                         try {
                             startActivity(intent)
@@ -58,6 +68,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
+        chosenLanguage = selectedLanguageTag()
         audio.setForeground(true)
     }
 
@@ -77,6 +88,8 @@ private fun RiddleClub(
     expeditions: List<Expedition>,
     preferences: SharedPreferences,
     audio: DiveAudio,
+    selectedLanguage: String,
+    changeLanguage: (String) -> Unit,
     openPrivacy: () -> Unit,
 ) {
     var found by remember { mutableStateOf(preferences.getStringSet("found", emptySet()).orEmpty().toSet()) }
@@ -85,10 +98,12 @@ private fun RiddleClub(
     var page by rememberSaveable { mutableStateOf(Page.Dive) }
     var route by rememberSaveable { mutableStateOf(0) }
     var specimen by rememberSaveable { mutableStateOf(0) }
-    var picked by rememberSaveable { mutableStateOf<String?>(null) }
+    var picked by key("picked-choice-index") { rememberSaveable { mutableStateOf<Int?>(null) } }
     var wrongCount by rememberSaveable { mutableStateOf(0) }
     var resultCount by rememberSaveable { mutableStateOf(0) }
     var detail by rememberSaveable { mutableStateOf<String?>(null) }
+
+    val canListen = voice && audio.narrationStatus == NarrationStatus.Ready
 
     androidx.compose.runtime.LaunchedEffect(music, voice) { audio.setOptions(music, voice) }
 
@@ -105,7 +120,7 @@ private fun RiddleClub(
         wrongCount = 0
         resultCount = 0
         go(Page.Riddle)
-        audio.narrate(expeditions[index].fish.first().id)
+        audio.narrate(expeditions[index].fish.first())
     }
 
     BackHandler(page != Page.Dive || detail != null) {
@@ -130,6 +145,10 @@ private fun RiddleClub(
         Page.Settings -> ClubScreen(page, ::go) {
             Settings(
                 music, voice,
+                selectedLanguage = selectedLanguage,
+                effectiveLanguage = audio.languageTag,
+                changeLanguage = changeLanguage,
+                narrationStatus = audio.narrationStatus,
                 setMusic = {
                     music = it
                     preferences.edit().putBoolean("music", it).apply()
@@ -146,17 +165,19 @@ private fun RiddleClub(
             expeditionIndex = route,
             specimen = specimen,
             picked = picked,
-            voice = voice,
+            voice = canListen,
             exit = { go(Page.Dive) },
-            listen = { audio.narrate(fish.id, picked == fish.name) },
+            listen = { audio.narrate(fish, picked == fish.correctChoice) },
             answer = { choice ->
-                if (picked != fish.name && picked != choice) {
+                if (picked != fish.correctChoice && picked != choice) {
                     picked = choice
-                    if (choice == fish.name) {
-                        if (wrongCount == 0) resultCount++
+                    if (choice == fish.correctChoice) {
+                        if (wrongCount == 0) {
+                            resultCount++
+                        }
                         found = found + fish.id
                         preferences.edit().putStringSet("found", found).apply()
-                        audio.narrate(fish.id, answer = true)
+                        audio.narrate(fish, answer = true)
                     } else {
                         wrongCount++
                     }
@@ -169,7 +190,7 @@ private fun RiddleClub(
                     specimen++
                     picked = null
                     wrongCount = 0
-                    audio.narrate(expedition.fish[specimen].id)
+                    audio.narrate(expedition.fish[specimen])
                 }
             },
         )
@@ -184,8 +205,8 @@ private fun RiddleClub(
     val selected = expeditions.asSequence().flatMap { it.fish.asSequence() }.firstOrNull { it.id == detail }
     if (selected != null && selected.id in found) {
         SpecimenDialog(
-            selected, voice,
-            listen = { audio.narrate(selected.id, answer = true) },
+            selected, canListen,
+            listen = { audio.narrate(selected, answer = true) },
             close = {
                 detail = null
                 audio.stopVoice()

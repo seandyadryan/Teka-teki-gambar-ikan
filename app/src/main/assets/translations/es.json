@@ -1,0 +1,104 @@
+{
+  "otherNames": {
+    "Lanternfish": "Pez linterna",
+    "Sunfish": "Pez luna"
+  },
+  "fish": {
+    "anglerfish": {
+      "name": "Rape abisal",
+      "question": "¿Qué pez lleva su propia lámpara?",
+      "fact": "En las profundidades, un señuelo luminoso ayuda a algunos rapes abisales a atraer a sus presas.",
+      "habitat": "Mar profundo"
+    },
+    "clownfish": {
+      "name": "Pez payaso",
+      "question": "¿Qué pez vive entre tentáculos urticantes?",
+      "fact": "El pez payaso vive entre anémonas de mar. Una capa de mucosidad lo protege de sus picaduras.",
+      "habitat": "Arrecife de coral"
+    },
+    "seahorse": {
+      "name": "Caballito de mar",
+      "question": "¿Qué pez macho lleva a sus crías?",
+      "fact": "La hembra deposita sus huevos en la bolsa del macho, donde permanecen hasta que están listos para eclosionar.",
+      "habitat": "Pradera marina"
+    },
+    "lionfish": {
+      "name": "Pez león",
+      "question": "¿Qué pez rayado luce un abanico de espinas venenosas?",
+      "fact": "El pez león se defiende con sus largas espinas venenosas y usa sus grandes aletas para acorralar a sus presas.",
+      "habitat": "Arrecife rocoso"
+    },
+    "pufferfish": {
+      "name": "Pez globo",
+      "question": "¿Qué pez se convierte en una bola con púas cuando se asusta?",
+      "fact": "Algunos peces globo tragan agua para hincharse. El aumento repentino de tamaño hace que sea más difícil tragárselos.",
+      "habitat": "Aguas costeras"
+    },
+    "hammerhead": {
+      "name": "Tiburón martillo",
+      "question": "¿Qué tiburón tiene la cabeza con forma de herramienta?",
+      "fact": "La cabeza ancha del tiburón martillo distribuye órganos sensoriales capaces de detectar señales eléctricas débiles de sus presas.",
+      "habitat": "Aguas costeras"
+    },
+    "parrotfish": {
+      "name": "Pez loro",
+      "question": "¿Qué pez de arrecife tiene un pico como el de un ave?",
+      "fact": "Sus dientes fusionados forman un pico. Muchas especies raspan algas del coral y expulsan las partículas trituradas en forma de arena.",
+      "habitat": "Arrecife de coral"
+    },
+    "swordfish": {
+      "name": "Pez espada",
+      "question": "¿Qué pez puede golpear un banco con su largo hocico?",
+      "fact": "El pez espada puede barrer un banco de presas con su hocico aplanado y aturdirlas o herirlas antes de comerlas.",
+      "habitat": "Mar abierto"
+    },
+    "whale_shark": {
+      "name": "Tiburón ballena",
+      "question": "¿Qué gigante moteado es el pez más grande que existe?",
+      "fact": "El tiburón ballena es el pez más grande del mundo. Filtra plancton y animales pequeños del agua.",
+      "habitat": "Mar abierto"
+    },
+    "blue_tang": {
+      "name": "Pez cirujano azul",
+      "question": "¿Qué pez azul de arrecife tiene una cola amarilla brillante?",
+      "fact": "El pez cirujano azul tiene una espina afilada cerca de la cola que usa para defenderse.",
+      "habitat": "Arrecife de coral"
+    },
+    "manta_ray": {
+      "name": "Mantarraya",
+      "question": "¿Qué pez parece volar con alas bajo el agua?",
+      "fact": "La mantarraya nada batiendo sus amplias aletas pectorales. Los lóbulos cerca de su boca guían el alimento hacia dentro.",
+      "habitat": "Mar abierto"
+    },
+    "moray_eel": {
+      "name": "Morena",
+      "question": "¿Qué pez con forma de cinta se esconde en las grietas del arrecife?",
+      "fact": "La morena abre y cierra la boca repetidamente para hacer pasar agua por sus branquias.",
+      "habitat": "Arrecife rocoso"
+    },
+    "sailfish": {
+      "name": "Pez vela",
+      "question": "¿Qué cazador marino puede levantar una gran vela en su lomo?",
+      "fact": "El pez vela puede plegar su alta aleta dorsal en una ranura del lomo mientras nada.",
+      "habitat": "Mar abierto"
+    },
+    "mandarinfish": {
+      "name": "Pez mandarín",
+      "question": "¿Qué pez de arrecife luce remolinos naranjas y de azul eléctrico?",
+      "fact": "El pez mandarín obtiene su color azul de células pigmentarias. Suele vivir entre fragmentos de coral y corales ramificados.",
+      "habitat": "Arrecife protegido"
+    },
+    "sunfish": {
+      "name": "Pez luna oceánico",
+      "question": "¿Qué pez redondo suele tomar el sol en la superficie?",
+      "fact": "A veces el pez luna oceánico se tumba de lado en la superficie. Puede hacerlo para calentarse tras una inmersión profunda.",
+      "habitat": "Mar abierto"
+    },
+    "archerfish": {
+      "name": "Pez arquero",
+      "question": "¿Qué pez derriba insectos con un chorro de agua?",
+      "fact": "El pez arquero lanza un chorro fino a los insectos que están sobre el agua y los atrapa cuando caen.",
+      "habitat": "Manglares"
+    }
+  }
+}

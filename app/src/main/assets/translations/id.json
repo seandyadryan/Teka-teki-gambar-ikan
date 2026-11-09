@@ -1,0 +1,104 @@
+{
+  "otherNames": {
+    "Lanternfish": "Ikan lentera",
+    "Sunfish": "Ikan mola"
+  },
+  "fish": {
+    "anglerfish": {
+      "name": "Anglerfish",
+      "question": "Ikan apa yang punya lampu?",
+      "fact": "Di laut dalam, umpan bercahaya membantu beberapa jenis anglerfish menarik mangsa agar mendekat.",
+      "habitat": "Laut dalam"
+    },
+    "clownfish": {
+      "name": "Ikan badut",
+      "question": "Ikan apa yang tinggal di antara tentakel penyengat?",
+      "fact": "Ikan badut tinggal di antara tentakel anemon laut. Lapisan lendir pelindung membantunya bertahan dari sengatan.",
+      "habitat": "Terumbu karang"
+    },
+    "seahorse": {
+      "name": "Kuda laut",
+      "question": "Ikan apa yang jantannya mengandung anak?",
+      "fact": "Betina meletakkan telur di kantong pengeraman jantan. Sang jantan membawanya sampai siap menetas.",
+      "habitat": "Padang lamun"
+    },
+    "lionfish": {
+      "name": "Ikan lepu",
+      "question": "Ikan belang apa yang punya duri berbisa seperti kipas?",
+      "fact": "Ikan lepu memakai duri panjangnya untuk membela diri dan sirip lebarnya untuk menyudutkan mangsa.",
+      "habitat": "Terumbu berbatu"
+    },
+    "pufferfish": {
+      "name": "Ikan buntal",
+      "question": "Ikan apa yang berubah jadi bola berduri saat kaget?",
+      "fact": "Beberapa ikan buntal menelan air hingga tubuhnya mengembang. Ukuran yang mendadak membesar membuatnya sulit ditelan.",
+      "habitat": "Perairan pesisir"
+    },
+    "hammerhead": {
+      "name": "Hiu martil",
+      "question": "Hiu apa yang kepalanya berbentuk seperti alat pertukangan?",
+      "fact": "Kepala hiu martil yang lebar memberi ruang bagi organ indra yang menangkap sinyal listrik lemah dari mangsa.",
+      "habitat": "Perairan pesisir"
+    },
+    "parrotfish": {
+      "name": "Ikan kakatua",
+      "question": "Ikan karang apa yang punya paruh seperti burung?",
+      "fact": "Gigi ikan kakatua menyatu membentuk paruh. Banyak jenisnya mengikis alga dari karang dan mengeluarkan serpihan halus sebagai pasir.",
+      "habitat": "Terumbu karang"
+    },
+    "swordfish": {
+      "name": "Ikan todak",
+      "question": "Ikan apa yang bisa menyabet sekawanan mangsa dengan moncongnya yang panjang?",
+      "fact": "Ikan todak dapat mengayunkan moncongnya yang pipih untuk membuat mangsa pingsan atau terluka sebelum memakannya.",
+      "habitat": "Laut lepas"
+    },
+    "whale_shark": {
+      "name": "Hiu paus",
+      "question": "Raksasa berbintik apa yang merupakan ikan terbesar di dunia?",
+      "fact": "Hiu paus adalah ikan terbesar di dunia. Ia menyaring plankton dan hewan kecil dari air.",
+      "habitat": "Laut lepas"
+    },
+    "blue_tang": {
+      "name": "Ikan botana biru",
+      "question": "Ikan karang biru apa yang ekornya kuning terang?",
+      "fact": "Ikan botana biru memiliki duri tajam di dekat ekor untuk membela diri.",
+      "habitat": "Terumbu karang"
+    },
+    "manta_ray": {
+      "name": "Pari manta",
+      "question": "Ikan apa yang seolah terbang dengan sayap di dalam air?",
+      "fact": "Pari manta berenang dengan mengepakkan sirip dada lebarnya. Cuping di dekat mulutnya membantu mengarahkan makanan masuk.",
+      "habitat": "Laut lepas"
+    },
+    "moray_eel": {
+      "name": "Belut moray",
+      "question": "Ikan berbentuk pita apa yang bersembunyi di celah terumbu?",
+      "fact": "Belut moray berulang kali membuka dan menutup mulut untuk mengalirkan air melewati insangnya.",
+      "habitat": "Terumbu berbatu"
+    },
+    "sailfish": {
+      "name": "Ikan layaran",
+      "question": "Pemburu laut apa yang bisa menegakkan layar tinggi di punggungnya?",
+      "fact": "Saat berenang, ikan layaran dapat melipat sirip punggungnya yang tinggi ke dalam lekukan di punggung.",
+      "habitat": "Laut lepas"
+    },
+    "mandarinfish": {
+      "name": "Ikan mandarin",
+      "question": "Ikan karang apa yang bercorak jingga dan biru terang?",
+      "fact": "Warna biru ikan mandarin berasal dari sel pigmen. Ia sering hidup di antara pecahan karang dan karang bercabang.",
+      "habitat": "Terumbu terlindung"
+    },
+    "sunfish": {
+      "name": "Ikan mola laut",
+      "question": "Ikan bundar apa yang sering terlihat berjemur di permukaan laut?",
+      "fact": "Ikan mola laut kadang berbaring menyamping di permukaan. Salah satu alasannya mungkin untuk menghangatkan diri setelah menyelam dalam.",
+      "habitat": "Laut lepas"
+    },
+    "archerfish": {
+      "name": "Ikan pemanah",
+      "question": "Ikan apa yang menjatuhkan serangga dengan semburan air?",
+      "fact": "Ikan pemanah menyemprot serangga di atas permukaan air lalu menangkapnya saat jatuh.",
+      "habitat": "Hutan bakau"
+    }
+  }
+}

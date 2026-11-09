@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Fish Riddle Club</string>
+    <string name="publisher_version" translatable="false">PT Deploy Dulu Pulang Nanti  •  %1$s</string>
+    <string name="progress_count" translatable="false">%1$d / %2$d</string>
+    <string name="language_tag">en</string>
+    <string name="nav_dive">Dive</string>
+    <string name="nav_guide">Field guide</string>
+    <string name="nav_settings">Settings</string>
+    <string name="home_club">THE OCEAN FIELD CLUB</string>
+    <string name="home_genre">ILLUSTRATED OCEAN RIDDLES</string>
+    <string name="home_title">Fish Riddle\nClub</string>
+    <string name="home_intro">Read the clue. Name the fish.</string>
+    <string name="dive_again">Dive again</string>
+    <string name="dive_start">Start diving</string>
+    <string name="dive_continue">Continue diving</string>
+    <string name="expeditions">THE EXPEDITIONS</string>
+    <string name="guide_cabinet">THE SPECIMEN CABINET</string>
+    <string name="guide_intro">Solve riddles to fill your guide.</string>
+    <string name="guide_count">%1$d OF %2$d DISCOVERED</string>
+    <string name="guide_number">NO. %1$02d</string>
+    <string name="guide_unknown">Undiscovered</string>
+    <string name="settings_clubhouse">THE CLUBHOUSE</string>
+    <string name="language_title">Language</string>
+    <string name="language_system">System default</string>
+    <string name="narration">Narration</string>
+    <string name="narration_bundled">Hear each clue and fish fact in English.</string>
+    <string name="narration_offline">Hear clues and facts using your device’s offline voice.</string>
+    <string name="narration_loading">Checking for an offline voice on this device.</string>
+    <string name="narration_missing">Install an offline voice for this language in Android’s text-to-speech settings.</string>
+    <string name="music">Music</string>
+    <string name="music_summary">Play the original Tidal Notebook soundtrack.</string>
+    <string name="privacy">Privacy policy</string>
+    <string name="plate">PLATE %1$d.%2$d</string>
+    <string name="image_named">Illustration of %1$s</string>
+    <string name="image_mystery">Mystery fish illustration</string>
+    <string name="specimen_found">SPECIMEN IDENTIFIED</string>
+    <string name="clue">THE CLUE</string>
+    <string name="hear_fact">Hear fact</string>
+    <string name="hear_clue">Hear clue</string>
+    <string name="summary">See dive summary</string>
+    <string name="next_riddle">Next riddle</string>
+    <string name="retry">Try again. Look closely at the picture.</string>
+    <string name="choose_answer">Pick one answer to log your discovery.</string>
+    <string name="expedition_complete">EXPEDITION COMPLETE</string>
+    <string name="logged_all">You logged all %1$d fish on this route.</string>
+    <string name="first_try">%1$d / %2$d ON FIRST TRY</string>
+    <string name="next_expedition">Next: %1$s</string>
+    <string name="open_guide">Open field guide</string>
+    <string name="back_expeditions">Back to expeditions</string>
+    <string name="close">Close</string>
+    <string name="route_first">First Dive</string>
+    <string name="route_first_sub">Get your bearings beneath the waves.</string>
+    <string name="route_reef">Reef Detectives</string>
+    <string name="route_reef_sub">Look closer at fins, spines and beaks.</string>
+    <string name="route_open">Out Past the Reef</string>
+    <string name="route_open_sub">Meet the drifters and giants.</string>
+    <string name="route_odd">Odd Fish Out</string>
+    <string name="route_odd_sub">Follow the ocean’s strangest clues.</string>
+</resources>

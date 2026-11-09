@@ -22,6 +22,8 @@ jobs:
       - name: Install Android SDK packages
         run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
       - uses: gradle/actions/setup-gradle@v4
+      - name: Verify localizations
+        run: python3 tools/verify_localizations.py
       - name: Check and package
         run: ./gradlew --no-daemon :app:lintRelease :app:testDebugUnitTest :app:assembleDebug :app:bundleRelease
       - uses: actions/upload-artifact@v4

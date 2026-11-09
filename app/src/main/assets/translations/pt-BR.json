@@ -1,0 +1,104 @@
+{
+  "otherNames": {
+    "Lanternfish": "Peixe-lanterna",
+    "Sunfish": "Peixe-lua"
+  },
+  "fish": {
+    "anglerfish": {
+      "name": "Peixe-pescador abissal",
+      "question": "Qual peixe carrega a própria lanterna?",
+      "fact": "Nas profundezas do oceano, uma isca luminosa ajuda alguns peixes-pescadores a atrair suas presas.",
+      "habitat": "Mar profundo"
+    },
+    "clownfish": {
+      "name": "Peixe-palhaço",
+      "question": "Qual peixe mora entre tentáculos que queimam?",
+      "fact": "O peixe-palhaço vive entre anêmonas-do-mar. Uma camada de muco protetor ajuda a resistir às picadas.",
+      "habitat": "Recife de coral"
+    },
+    "seahorse": {
+      "name": "Cavalo-marinho",
+      "question": "Em qual peixe o pai carrega os filhotes?",
+      "fact": "A fêmea deposita os ovos na bolsa do macho. Ele os carrega até que estejam prontos para eclodir.",
+      "habitat": "Pradaria marinha"
+    },
+    "lionfish": {
+      "name": "Peixe-leão",
+      "question": "Qual peixe listrado exibe um leque de espinhos venenosos?",
+      "fact": "O peixe-leão usa os espinhos compridos e venenosos para se defender e as nadadeiras largas para encurralar presas.",
+      "habitat": "Recife rochoso"
+    },
+    "pufferfish": {
+      "name": "Baiacu",
+      "question": "Qual peixe vira uma bola espinhosa quando leva um susto?",
+      "fact": "Alguns baiacus engolem água para inflar. O tamanho repentino torna mais difícil engoli-los.",
+      "habitat": "Águas costeiras"
+    },
+    "hammerhead": {
+      "name": "Tubarão-martelo",
+      "question": "Qual tubarão tem a cabeça em forma de ferramenta?",
+      "fact": "A cabeça larga do tubarão-martelo distribui órgãos sensoriais que detectam sinais elétricos fracos das presas.",
+      "habitat": "Águas costeiras"
+    },
+    "parrotfish": {
+      "name": "Peixe-papagaio",
+      "question": "Qual peixe de recife tem um bico parecido com o de uma ave?",
+      "fact": "Os dentes unidos formam um bico. Muitas espécies raspam algas dos corais e eliminam os fragmentos triturados em forma de areia.",
+      "habitat": "Recife de coral"
+    },
+    "swordfish": {
+      "name": "Espadarte",
+      "question": "Qual peixe golpeia um cardume com seu focinho comprido?",
+      "fact": "O espadarte pode varrer um cardume de presas com seu focinho achatado, atordoando ou ferindo peixes antes de comê-los.",
+      "habitat": "Mar aberto"
+    },
+    "whale_shark": {
+      "name": "Tubarão-baleia",
+      "question": "Qual gigante pintado é o maior peixe que existe?",
+      "fact": "O tubarão-baleia é o maior peixe do mundo. Ele filtra plâncton e pequenos animais da água.",
+      "habitat": "Mar aberto"
+    },
+    "blue_tang": {
+      "name": "Peixe-cirurgião-azul",
+      "question": "Qual peixe azul de recife tem a cauda amarela e brilhante?",
+      "fact": "O peixe-cirurgião-azul tem um espinho afiado perto da cauda que usa para se defender.",
+      "habitat": "Recife de coral"
+    },
+    "manta_ray": {
+      "name": "Raia-manta",
+      "question": "Qual peixe parece voar com asas debaixo d’água?",
+      "fact": "A raia-manta nada batendo as grandes nadadeiras peitorais. Os lobos perto da boca ajudam a direcionar o alimento.",
+      "habitat": "Mar aberto"
+    },
+    "moray_eel": {
+      "name": "Moreia",
+      "question": "Qual peixe em forma de fita se esconde nas fendas do recife?",
+      "fact": "A moreia abre e fecha a boca repetidamente para fazer a água passar pelas brânquias.",
+      "habitat": "Recife rochoso"
+    },
+    "sailfish": {
+      "name": "Peixe-vela",
+      "question": "Qual caçador do oceano pode erguer uma vela alta nas costas?",
+      "fact": "O peixe-vela pode dobrar a nadadeira dorsal alta em um sulco no dorso enquanto nada.",
+      "habitat": "Mar aberto"
+    },
+    "mandarinfish": {
+      "name": "Peixe-mandarim",
+      "question": "Qual peixe de recife tem desenhos em laranja e azul intenso?",
+      "fact": "O peixe-mandarim ganha a cor azul de células pigmentares. Ele costuma viver entre fragmentos e ramos de coral.",
+      "habitat": "Recife abrigado"
+    },
+    "sunfish": {
+      "name": "Peixe-lua oceânico",
+      "question": "Qual peixe redondo é visto tomando sol na superfície?",
+      "fact": "O peixe-lua oceânico às vezes fica de lado na superfície. Um motivo pode ser se aquecer depois de mergulhos profundos.",
+      "habitat": "Mar aberto"
+    },
+    "archerfish": {
+      "name": "Peixe-arqueiro",
+      "question": "Qual peixe derruba insetos com um jato de água?",
+      "fact": "O peixe-arqueiro dispara um jato fino nos insetos acima da água e os captura quando caem.",
+      "habitat": "Manguezais"
+    }
+  }
+}
