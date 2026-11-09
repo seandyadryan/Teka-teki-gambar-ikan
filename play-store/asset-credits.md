@@ -1,0 +1,11 @@
+# Asset credits
+
+- The specimen illustrations were created for this project with the built-in ImageGen tool. The contact sheet was split into individual specimen plates and composited into the game and store art.
+- The icon, device frames, and promotional layouts were drawn for Fish Riddle Club. Screens and trailer footage came from the Android application.
+- “Tidal Notebook” is a project-original score synthesized by `tools/make_game_media.py`. The script generates the notes, percussion, and instruments from waveforms, without external samples.
+- English voice-over was synthesized offline with the Apache 2.0 [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) model and the `af_heart` voice. Only rendered audio is shipped.
+- Lora is distributed under the SIL Open Font License. The license and the Kokoro license are in `app/src/main/assets/licenses`.
+
+## Illustration prompt
+
+Use case: illustration-story. A single square 4-by-4 contact sheet of exactly sixteen different ocean fish illustrations, one fish centered per equally sized square cell, evenly aligned, generous breathing space. Artwork for a polished ocean field-guide picture riddle game. Consistent look of hand-printed 1970s marine biology book, flat opaque gouache, lightly stippled ink, finely observed recognizable silhouettes, sophisticated colors, bold profiles. Every tile has the same perfectly flat dark midnight teal backdrop #102e36, with no borders, no decorative elements, no shadows, no lettering. Keep each fish entirely within the inner 75 percent of its individual tile, never touching other cells. Exact left-to-right order: row one: deep sea anglerfish with glowing apricot lure and dramatic teeth; orange white striped clownfish; golden seahorse; indigo striped lionfish with fanned spines. Row two: ochre inflated spiky pufferfish; blue hammerhead shark; coral red and teal parrotfish; long navy swordfish with sharp bill. Row three: spotted whale shark; blue tang with yellow tail; lavender manta ray with long tail; spotted green moray eel. Row four: red and blue sailfish with tall sail; vibrant copper and cyan mandarinfish; pale pink flat ocean sunfish; jade archerfish with dark vertical bands. Depict species-specific anatomy and clear diagnostic marks. Text: none. Only the 4x4 specimen grid.

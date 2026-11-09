@@ -1,0 +1,210 @@
+[
+  {
+    "id": "anglerfish",
+    "name": "Anglerfish",
+    "question": "Which fish carries its own lamp?",
+    "fact": "In the deep sea, a glowing lure helps some anglerfish draw prey within reach.",
+    "choices": [
+      "Lanternfish",
+      "Anglerfish",
+      "Swordfish",
+      "Lionfish"
+    ],
+    "habitat": "Deep sea"
+  },
+  {
+    "id": "clownfish",
+    "name": "Clownfish",
+    "question": "Which fish makes its home among stinging tentacles?",
+    "fact": "Clownfish live among sea anemones. A protective mucus layer helps them tolerate the stings.",
+    "choices": [
+      "Clownfish",
+      "Blue Tang",
+      "Parrotfish",
+      "Mandarinfish"
+    ],
+    "habitat": "Coral reef"
+  },
+  {
+    "id": "seahorse",
+    "name": "Seahorse",
+    "question": "Which fish dad carries the babies?",
+    "fact": "The female places her eggs in the male’s brood pouch. He carries them until they are ready to hatch.",
+    "choices": [
+      "Moray Eel",
+      "Archerfish",
+      "Seahorse",
+      "Sunfish"
+    ],
+    "habitat": "Seagrass beds"
+  },
+  {
+    "id": "lionfish",
+    "name": "Lionfish",
+    "question": "Which striped fish wears a fan of venomous spines?",
+    "fact": "A lionfish uses its long venomous spines for defense and its wide fins to corner prey.",
+    "choices": [
+      "Clownfish",
+      "Pufferfish",
+      "Hammerhead Shark",
+      "Lionfish"
+    ],
+    "habitat": "Rocky reef"
+  },
+  {
+    "id": "pufferfish",
+    "name": "Pufferfish",
+    "question": "Which fish turns into a prickly ball when startled?",
+    "fact": "Some pufferfish gulp water to inflate. The sudden change in size makes them harder to swallow.",
+    "choices": [
+      "Anglerfish",
+      "Pufferfish",
+      "Sunfish",
+      "Mandarinfish"
+    ],
+    "habitat": "Coastal waters"
+  },
+  {
+    "id": "hammerhead",
+    "name": "Hammerhead Shark",
+    "question": "Which shark has a head shaped like a tool?",
+    "fact": "A hammerhead’s wide head spreads out sensory organs that can detect tiny electrical signals from prey.",
+    "choices": [
+      "Hammerhead Shark",
+      "Whale Shark",
+      "Manta Ray",
+      "Swordfish"
+    ],
+    "habitat": "Coastal waters"
+  },
+  {
+    "id": "parrotfish",
+    "name": "Parrotfish",
+    "question": "Which reef fish has a beak like a bird?",
+    "fact": "A parrotfish’s fused teeth form a beak. Many species scrape algae off coral and pass the ground-up bits as sand.",
+    "choices": [
+      "Blue Tang",
+      "Lionfish",
+      "Parrotfish",
+      "Clownfish"
+    ],
+    "habitat": "Coral reef"
+  },
+  {
+    "id": "swordfish",
+    "name": "Swordfish",
+    "question": "Which fish can slash through a school with its long bill?",
+    "fact": "A swordfish can swipe its flat bill through a school of prey, stunning or injuring fish before eating them.",
+    "choices": [
+      "Archerfish",
+      "Hammerhead Shark",
+      "Whale Shark",
+      "Swordfish"
+    ],
+    "habitat": "Open ocean"
+  },
+  {
+    "id": "whale_shark",
+    "name": "Whale Shark",
+    "question": "Which spotted giant is the largest living fish?",
+    "fact": "The whale shark is the world’s largest fish. It filters plankton and small animals from the water.",
+    "choices": [
+      "Hammerhead Shark",
+      "Whale Shark",
+      "Manta Ray",
+      "Sunfish"
+    ],
+    "habitat": "Open ocean"
+  },
+  {
+    "id": "blue_tang",
+    "name": "Blue Tang",
+    "question": "Which blue reef fish has a bright yellow tail?",
+    "fact": "The palette surgeonfish, also called a blue tang, has a sharp spine near its tail for defense.",
+    "choices": [
+      "Blue Tang",
+      "Mandarinfish",
+      "Clownfish",
+      "Parrotfish"
+    ],
+    "habitat": "Coral reef"
+  },
+  {
+    "id": "manta_ray",
+    "name": "Manta Ray",
+    "question": "Which fish seems to fly on underwater wings?",
+    "fact": "A manta ray swims by flapping its broad pectoral fins. The lobes near its mouth help funnel food in.",
+    "choices": [
+      "Sunfish",
+      "Sailfish",
+      "Manta Ray",
+      "Pufferfish"
+    ],
+    "habitat": "Open ocean"
+  },
+  {
+    "id": "moray_eel",
+    "name": "Moray Eel",
+    "question": "Which ribbon-shaped fish hides in reef crevices?",
+    "fact": "A moray eel repeatedly opens and closes its mouth to move water over its gills.",
+    "choices": [
+      "Seahorse",
+      "Lionfish",
+      "Archerfish",
+      "Moray Eel"
+    ],
+    "habitat": "Rocky reef"
+  },
+  {
+    "id": "sailfish",
+    "name": "Sailfish",
+    "question": "Which ocean hunter can raise a tall sail on its back?",
+    "fact": "The sailfish can fold its tall dorsal fin into a groove along its back while swimming.",
+    "choices": [
+      "Swordfish",
+      "Sailfish",
+      "Manta Ray",
+      "Blue Tang"
+    ],
+    "habitat": "Open ocean"
+  },
+  {
+    "id": "mandarinfish",
+    "name": "Mandarinfish",
+    "question": "Which reef fish wears swirling orange and electric blue?",
+    "fact": "The mandarinfish gets its blue color from pigment cells. It often lives among rubble and branching coral.",
+    "choices": [
+      "Mandarinfish",
+      "Parrotfish",
+      "Blue Tang",
+      "Lionfish"
+    ],
+    "habitat": "Sheltered reef"
+  },
+  {
+    "id": "sunfish",
+    "name": "Ocean Sunfish",
+    "question": "Which round fish is often seen basking at the surface?",
+    "fact": "Ocean sunfish sometimes lie on their sides at the surface. Warming up after deep dives may be one reason.",
+    "choices": [
+      "Pufferfish",
+      "Whale Shark",
+      "Ocean Sunfish",
+      "Manta Ray"
+    ],
+    "habitat": "Open ocean"
+  },
+  {
+    "id": "archerfish",
+    "name": "Archerfish",
+    "question": "Which fish knocks insects down with a jet of water?",
+    "fact": "An archerfish shoots a narrow stream at insects above the surface, then catches its meal when it falls.",
+    "choices": [
+      "Moray Eel",
+      "Swordfish",
+      "Mandarinfish",
+      "Archerfish"
+    ],
+    "habitat": "Mangroves"
+  }
+]

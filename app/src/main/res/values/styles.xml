@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fish Riddle Club</string>
+    <style name="Theme.FishRiddle" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#102E36</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#E9B86A</item>
+    </style>
+</resources>
